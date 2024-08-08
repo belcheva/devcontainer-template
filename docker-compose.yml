@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    build: ./
+    container_name: python-server
+    ports:
+      - 127.0.0.1:8501:8501
+    volumes:
+      - ./:/code
+    restart: unless-stopped
